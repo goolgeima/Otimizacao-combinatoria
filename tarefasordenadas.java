@@ -7,14 +7,14 @@ public class tarefasordenadas{
         int qntmaquinas;
         int qnttarefas;
         
-        //System.out.println("Digite o número de máquinas que serão utilizadas: ");
+        System.out.println("Digite o número de máquinas que serão utilizadas: ");
         qntmaquinas = sc.nextInt();
-        //System.out.println("Digite o número de tarefas que serão acionadas às máquinas: ");
+        System.out.println("Digite o número de tarefas que serão acionadas às máquinas: ");
         qnttarefas = sc.nextInt();
         ArrayList<Integer> pesos = new ArrayList<>();
 
         for (int j=1;j<=qnttarefas;j++){
-            //System.out.println("Digite o tempo que a tarefa " + j + " irá demorar: ");
+            System.out.println("Digite o tempo que a tarefa " + j + " irá demorar: ");
             int peso = sc.nextInt();
             pesos.add(peso);
         }
@@ -43,7 +43,7 @@ public class tarefasordenadas{
             tempos[minIndex] += peso;
         }
 
-        // Exibe as filas de cada máquina
+        // mxibe as filas de cada máquina
         for (int i = 0; i < qntmaquinas; i++) {
             System.out.println("Máquina " + (i+1) + ": " + filas.get(i) + " | Tempo total: " + tempos[i]);
         }
